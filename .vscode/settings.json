@@ -1,0 +1,57 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "svelte.enable-ts-plugin": true,
+  "files.associations": {
+    "*.svelte": "svelte",
+    "*.md": "markdown"
+  },
+  "emmet.includeLanguages": {
+    "svelte": "html"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.d.ts, ${capture}.js.map",
+    "*.svelte": "${capture}.svelte.d.ts",
+    "package.json": "package-lock.json, pnpm-lock.yaml, .npmrc",
+    ".env": ".env.local, .env.development, .env.production, .env.test",
+    "README.md": "CHANGELOG.md, CONTRIBUTING.md, LICENSE, .gitignore, ROADMAP.md",
+    ".prettierrc": ".prettierignore",
+    "vite.config.*": "vitest.config.*"
+  },
+  "markdown.validate.enabled": true,
+  "markdown.suggest.paths.enabled": true,
+  "tailwindCSS.includeLanguages": {
+    "svelte": "html"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.svelte-kit": true,
+    "**/pocketbase/pb_data": true,
+    "**/pocketbase/pocketbase": true,
+    "**/*.lock": true
+  },
+  "files.exclude": {
+    "**/.svelte-kit": true,
+    "**/node_modules": true
+  },
+  "git.ignoreLimitWarning": true,
+  "editor.bracketPairColorization.enabled": true,
+  // "editor.guides.bracketPairs": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120
+}
