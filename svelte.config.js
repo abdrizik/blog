@@ -2,8 +2,8 @@ import rehypeShiki from '@shikijs/rehype'
 import adapter from '@sveltejs/adapter-auto'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdPreprocess } from './src/lib/preprocess/markdown.js'
-import { syntaxThemeLight } from './src/lib/themes/syntax-theme-light.js'
-import { syntaxThemeDark } from './src/lib/themes/syntax-theme.js'
+import syntaxThemeDark from './src/lib/themes/syntax-theme-dark.json' with { type: 'json' }
+import syntaxThemeLight from './src/lib/themes/syntax-theme-light.json' with { type: 'json' }
 
 import {
   transformerMetaHighlight,
