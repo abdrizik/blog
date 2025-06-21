@@ -4,10 +4,10 @@
  */
 
 // @ts-nocheck
-import { unified } from 'unified'
+import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
+import { unified } from 'unified'
 import { visit } from 'unist-util-visit'
 import { matter } from '../utils/matter.js'
 
@@ -159,10 +159,10 @@ export function mdPreprocess(options = {}) {
                       : match
             )
 
-          return `<div class="relative code-block-wrapper">
-  <CodeCopyButton code={${JSON.stringify(plainText)}} />
-  {@html \`<pre${cleanAttrs}>${escapeSvelte(content)}</pre>\`}
-</div>`
+          return `<div class="code-block-wrapper">
+          <CodeCopyButton code={${JSON.stringify(plainText)}} />
+            {@html \`<pre${cleanAttrs}>${escapeSvelte(content)}</pre>\`}
+          </div>`
         })
 
         // Add script tags with metadata
