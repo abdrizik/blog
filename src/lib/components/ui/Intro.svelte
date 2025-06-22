@@ -2,50 +2,33 @@
 </script>
 
 <div class="intro">
-  <p class="intro-headline">
-    <span class="name">Abdelrahman Rizik.</span> Frontend Software Engineer,
-    <br />
-    specializing in user interfaces and interactive experiences at
-    <a
-      href="https://ard.com"
-      class="company-name">ARD</a
-    >.
-  </p>
-  <p class="intro-description">
-    Crafting elegant web solutions with modern frameworks, balancing technical
-    excellence with seamless user experiences. Building complex systems with
-    simplicity in mind, transforming concepts into code.
-  </p>
+  <h1 class="headline">Abdalrahman Rizik</h1>
+  <p class="description">Software engineer and designer sometimes</p>
 </div>
 
 <style>
-  .intro-headline {
-    font-size: var(--text-2xl);
-    font-family: 'Newsreader', 'Newsreader Placeholder', serif;
-    color: var(--color-gray-700);
-    margin-bottom: var(--spacing-6);
+  div {
+    padding: var(--spacing-8) 0;
+  }
+
+  h1 {
     font-family: var(--font-serif);
-  }
-
-  .name {
-    color: var(--color-gray-900);
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
     font-weight: var(--font-weight-medium);
+
+    color: var(--color-gray-900);
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: var(--spacing-4);
   }
 
-  .intro-description {
-    color: var(--color-gray-500);
+  p {
     font-weight: var(--font-weight-normal);
-    font-size: var(--text-base);
-    line-height: var(--text-base--line-height);
-    text-wrap: pretty;
-  }
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
 
-  .company-name {
-    font-family: var(--font-sans);
-    color: var(--color-gray-800);
-    text-decoration: none;
-    text-decoration: wavy underline var(--color-gray-700) 1.5px;
-    text-underline-offset: 2px;
-    font-style: italic;
+    color: var(--color-gray-600);
   }
 </style>
