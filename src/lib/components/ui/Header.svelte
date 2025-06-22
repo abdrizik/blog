@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { links } from '$lib/constants/links'
 </script>
 
 <header>
