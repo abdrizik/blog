@@ -13,7 +13,7 @@
 
 <section>
   <SectionHeading>
-    ~/ some amazing people I have collaborated with
+    Some amazing people I have collaborated with
   </SectionHeading>
 
   <div class="collaborators">

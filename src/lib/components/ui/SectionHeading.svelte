@@ -14,8 +14,8 @@
 
 <style>
   .section-heading {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
     color: var(--color-gray-400);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-4);
   }
 </style>

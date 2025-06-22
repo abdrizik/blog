@@ -93,6 +93,7 @@
     padding: var(--spacing-2) var(--spacing-4);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-neutral-500);
+    z-index: 5;
 
     animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }

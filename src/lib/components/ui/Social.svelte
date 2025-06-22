@@ -18,43 +18,43 @@
 </script>
 
 <section>
-  <SectionHeading>~/ find me online</SectionHeading>
+  <SectionHeading>Content</SectionHeading>
 
-  <div class="social-links">
-    {#each socialPlatforms as platform}
-      <a
-        href={platform.href}
-        class="social-link"
-      >
-        {platform.label}
-      </a>
-    {/each}
-  </div>
+  <p>
+    Reach me at <a
+      href="https://bsky.app/profile/abdrizik.bsky.social"
+      target="_blank"
+    >
+      @abdrizik
+    </a>
+    or
+    <a
+      href="mailto:abdelrahman.rizik@gmail.com"
+      target="_blank"
+    >
+      abdelrahman.rizik@gmail.com
+    </a>.
+  </p>
 </section>
 
 <style>
-  .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
+  p {
+    color: var(--color-gray-600);
+  }
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-gray-300);
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 4px;
+    text-decoration-style: solid;
+
+    color: var(--color-gray-800);
   }
 
-  .social-link {
-    background-color: var(--color-neutral-800);
-    color: white;
-
-    border-radius: var(--radius-full);
-    padding: var(--spacing-2) var(--spacing-4);
-
-    font-size: var(--text-sm);
-    line-height: var(--text-sm--line-height);
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    transition: background-color 0.3s;
-  }
-
-  .social-link:hover {
-    background-color: var(--color-neutral-900);
-  }
+  /* Alternative: using border for more control */
+  /* a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-blue-500);
+    padding-bottom: 1px;
+  } */
 </style>

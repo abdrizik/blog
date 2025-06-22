@@ -78,8 +78,8 @@
   }
 
   .categories a {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
     border-radius: 9999px;
     border: 1px solid var(--color-gray-200);
     color: var(--color-gray-600);
@@ -87,37 +87,17 @@
     padding: var(--spacing-1) var(--spacing-3);
     cursor: pointer;
     text-decoration: none;
-    transition:
-      border-color 0.2s ease-in-out,
-      color 0.2s ease-in-out,
-      background-color 0.2s ease-in-out;
+    transition: al var(--default-transition-duration)
+      var(--default-transition-timing-function);
   }
 
   .categories a:hover {
-    border-color: var(--color-gray-900);
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-800);
   }
 
   .categories a.active {
     background-color: var(--color-gray-900);
     color: var(--color-white);
-    border-color: var(--color-gray-900);
-  }
-
-  /* Dark theme support */
-  :global(html.dark) .categories a {
-    background-color: transparent;
-    color: var(--color-gray-400);
-    border-color: var(--color-gray-800);
-  }
-
-  :global(html.dark) .categories a:hover {
-    border-color: var(--color-gray-100);
-    color: var(--color-gray-100);
-  }
-
-  :global(html.dark) .categories a.active {
-    background-color: var(--color-gray-100);
-    color: var(--color-gray-900);
-    border-color: var(--color-gray-100);
   }
 </style>

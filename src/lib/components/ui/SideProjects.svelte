@@ -26,7 +26,7 @@
 </script>
 
 <section>
-  <SectionHeading>~/ side projects</SectionHeading>
+  <SectionHeading>Side projects</SectionHeading>
   <div class="projects">
     {#each sideProjects as project, index (index)}
       <div class="project">

@@ -11,6 +11,6 @@
 </script>
 
 <div>
-  <SectionHeading>~/ latest articles</SectionHeading>
+  <SectionHeading>Latest articles</SectionHeading>
   <ArticlesList {articles} />
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from '$lib/components/ui/Header.svelte'
   import Toolbar from '$lib/components/ui/Toolbar.svelte'
+  import Blur from '$lib/components/ui/Blur.svelte'
   import '$lib/styles/main.css'
 
   const { children } = $props()
@@ -14,6 +15,7 @@
     </main>
     <Toolbar />
   </div>
+  <Blur />
 </div>
 
 <style>

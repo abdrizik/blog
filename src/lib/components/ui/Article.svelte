@@ -63,10 +63,6 @@
 </a>
 
 <style>
-  .article {
-    border-radius: var(--radius-lg);
-  }
-
   .article-content {
     display: flex;
     flex-direction: column;
@@ -89,7 +85,8 @@
 
   .arrow-icon {
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity var(--default-transition-duration)
+      var(--default-transition-timing-function);
   }
 
   .article:hover .arrow-icon {
@@ -103,8 +100,10 @@
 
   .article-meta {
     margin-top: var(--spacing-4);
+
     font-size: var(--text-sm);
     line-height: var(--text-sm--line-height);
+
     color: var(--color-gray-500);
   }
 </style>

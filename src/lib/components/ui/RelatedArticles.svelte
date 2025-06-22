@@ -14,7 +14,7 @@
   <div class="related-articles">
     <hr />
 
-    <SectionHeading>~/ related articles</SectionHeading>
+    <SectionHeading>Related articles</SectionHeading>
 
     <div class="articles">
       {#each articles as article (article.slug)}

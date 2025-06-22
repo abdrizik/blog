@@ -28,13 +28,15 @@
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-}
 
-* {
-  scroll-margin: 2rem;
+  --color-cream: #f4f4f4;
 }
 
 .full-bleed {
   width: 100%;
   grid-column: 1 / 4;
+}
+
+body {
+  background: var(--color-cream);
 }
