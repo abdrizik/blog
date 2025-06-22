@@ -162,8 +162,4 @@
   :global(html.dark) .dot {
     background: #fff;
   }
-
-  .nav-button svg {
-    display: block;
-  }
 </style>
