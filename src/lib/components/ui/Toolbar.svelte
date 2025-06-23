@@ -151,7 +151,8 @@
   }
 
   .nav-button:hover {
-    background: var(--color-neutral-100);
+    background: var(--color-border-light);
+    color: var(--color-sea-blue);
     transform: scale(1.05);
   }
 
