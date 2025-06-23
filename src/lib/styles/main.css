@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './theme.css';
 @import './prose.css';
+@import './shiki.css';
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -37,4 +38,6 @@ html {
 
 body {
   background: var(--color-cream);
+
+  font-family: var(--font-sans);
 }

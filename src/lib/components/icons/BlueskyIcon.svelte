@@ -1,6 +1,14 @@
+<script lang="ts">
+  interface Props {
+    size?: number | string
+  }
+
+  const { size = 20 }: Props = $props()
+</script>
+
 <svg
-  width="20"
-  height="20"
+  width={size}
+  height={size}
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"

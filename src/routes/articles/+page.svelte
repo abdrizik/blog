@@ -14,24 +14,13 @@
   const { data }: { data: PageData } = $props()
 
   const selectedCategory = $derived(page.url.searchParams.get('category'))
-
-  const filteredArticles = $derived(
-    !selectedCategory
-      ? data.articles
-      : data.articles.filter((article) => {
-          const articleCategorySlug = article.category
-            .toLowerCase()
-            .replace(/\s+/g, '-')
-          return articleCategorySlug === selectedCategory
-        })
-  )
 </script>
 
 <svelte:head>
-  <title>Articles & Thoughts</title>
+  <title>Articles & Insights | Abdelrahman Rizik</title>
   <meta
     name="description"
-    content="I write about design systems, UI engineering, and the intersection of design and development. Here's a collection of my latest articles and insights."
+    content="Technical articles on web development, CSS, JavaScript, TypeScript, Vue, React, SvelteKit, and software engineering best practices."
   />
 </svelte:head>
 
@@ -42,8 +31,11 @@
   />
 
   <div>
-    <CategoryFilter categories={data.categories} {selectedCategory} />
-    <ArticlesList articles={filteredArticles} />
+    <CategoryFilter
+      categories={data.categories}
+      {selectedCategory}
+    />
+    <ArticlesList articles={data.articles} />
   </div>
 </div>
 

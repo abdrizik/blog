@@ -6,9 +6,7 @@ const articles = import.meta.glob<Article>('../../content/**/*.md', {
 export interface Category {
   name: string
   slug: string
-  description?: string
 }
-
 export interface Article {
   title: string
   description: string
@@ -17,6 +15,7 @@ export interface Article {
   publishAt: string
   updatedAt: string
   slug: string
+  categorySlug: string
 }
 
 // Create enriched articles with slug
@@ -39,19 +38,16 @@ enrichedArticles.forEach((article) => {
   if (!categoriesMap.has(article.category)) {
     categoriesMap.set(article.category, {
       name: article.category,
-      slug: article.category.toLowerCase().replace(/\s+/g, '-')
+      slug: article.categorySlug
     })
   }
 })
 
 export function getArticles(categorySlug?: string): Article[] {
   if (categorySlug) {
-    return enrichedArticles.filter((article) => {
-      const articleCategorySlug = article.category
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-      return articleCategorySlug === categorySlug
-    })
+    return enrichedArticles.filter(
+      (article) => article.categorySlug === categorySlug
+    )
   }
 
   return enrichedArticles
@@ -63,7 +59,7 @@ export function getAllCategories(): Category[] {
   )
 }
 
-export function getArticleMetadata(slug: string): Article {
+export function getArticleMetadata(slug: string) {
   const article = enrichedArticles.find((article) => article.slug === slug)
 
   if (!article) {
@@ -79,7 +75,8 @@ export function getRelatedArticles(slug: string, limit = 3): Article[] {
   return enrichedArticles
     .filter(
       (article) =>
-        article.slug !== slug && article.category === currentArticle.category
+        article.slug !== slug &&
+        article.categorySlug === currentArticle.categorySlug
     )
     .slice(0, limit)
 }

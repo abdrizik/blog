@@ -18,7 +18,7 @@
       class="nav-button"
       aria-label="Home"
     >
-      <HomeIcon />
+      <HomeIcon size={18} />
     </a>
 
     <div class="divider"></div>
@@ -28,16 +28,17 @@
       class="nav-button"
       aria-label="Articles"
     >
-      <ArticlesIcon />
+      <ArticlesIcon size={18} />
     </a>
 
     <a
       class="nav-button"
       href="https://bsky.app/profile/abdrizik.bsky.social"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="Bluesky"
     >
-      <BlueskyIcon />
+      <BlueskyIcon size={18} />
     </a>
 
     <button
@@ -68,7 +69,7 @@
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(15px);
+      transform: translateY(var(--spacing-4));
     }
     to {
       opacity: 1;
@@ -78,56 +79,62 @@
 
   .toolbar {
     position: fixed;
-    bottom: 18px;
+    bottom: var(--spacing-4);
     left: 50%;
+    transform: translateX(-50%);
 
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--spacing-3);
 
-    color: var(--color-neutral-400);
-    background: rgba(28, 28, 30, 0.85);
-    backdrop-filter: blur(8px);
+    color: var(--color-neutral-600);
+    background: #ffffff;
+    backdrop-filter: blur(var(--blur-md));
 
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     padding: var(--spacing-2) var(--spacing-4);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-neutral-500);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-neutral-200);
     z-index: 5;
 
-    animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: slideUp 0.3s var(--ease-out) forwards;
   }
 
   .divider {
     width: 1px;
-    height: 24px;
-    background: var(--color-neutral-500);
+    height: var(--spacing-6);
+    background: var(--color-neutral-300);
     align-self: center;
     opacity: 0;
-    animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: fadeInUp 0.3s var(--ease-out) forwards;
     animation-delay: calc(0.1s + 1 * 0.07s);
   }
 
   .nav-buttons {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: var(--spacing-1_5);
   }
 
   .nav-button {
-    width: 32px;
-    height: 32px;
+    width: var(--spacing-8);
+    height: var(--spacing-8);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     background: none;
     border: none;
     cursor: pointer;
     color: inherit;
     padding: 0;
     opacity: 0;
-    animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transition:
+      background-color var(--default-transition-duration)
+        var(--default-transition-timing-function),
+      transform var(--default-transition-duration)
+        var(--default-transition-timing-function);
+    animation: fadeInUp 0.3s var(--ease-out) forwards;
   }
 
   .nav-buttons > :nth-child(1) {
@@ -144,23 +151,26 @@
   }
 
   .nav-button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-neutral-100);
+    transform: scale(1.05);
+  }
+
+  .nav-button:active {
+    transform: scale(0.95);
   }
 
   .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #646466;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: var(--spacing-5);
+    height: var(--spacing-5);
+    border-radius: var(--radius-full);
+    background: var(--color-neutral-400);
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .dot.active {
-    background: #fff;
+    background: var(--color-neutral-800);
     transform: scale(1.1);
-  }
-
-  :global(html.dark) .dot {
-    background: #fff;
   }
 </style>

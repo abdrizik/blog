@@ -13,8 +13,7 @@ export async function load({ params, data }) {
       relatedArticles: data.relatedArticles
     }
   } catch (e) {
-    console.error('Error loading lesson:', e)
-    // If the file doesn't exist or can't be imported, throw a 404
+    console.error('Error loading article:', e)
     throw error(404, `Article not found: ${slug}`)
   }
 }

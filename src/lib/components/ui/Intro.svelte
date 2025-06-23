@@ -3,7 +3,10 @@
 
 <div>
   <p>Abdalrahman Rizik</p>
-  <p><span> Software engineer </span> and <span> designer </span> sometimes</p>
+  <p>
+    <span>Software engineer</span> and sometime
+    <span>designer</span>.
+  </p>
 </div>
 
 <style>
@@ -23,6 +26,7 @@
 
     span {
       font-family: var(--font-serif);
+      color: var(--color-gray-700);
       font-style: italic;
     }
   }

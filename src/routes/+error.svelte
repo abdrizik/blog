@@ -1,8 +1,11 @@
 <script lang="ts">
-  const { status, error } = $props<{
-    status: number
-    error: { message?: string } | null
-  }>()
+  import { goto } from '$app/navigation'
+  import { page } from '$app/state'
+  import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte'
+  import HomeIcon from '$lib/components/icons/HomeIcon.svelte'
+
+  const status = $derived(page.status)
+  const error = $derived(page.error)
 
   const is404 = $derived(status === 404)
   const abortReason = $derived(
@@ -11,14 +14,24 @@
         ? 'This page could not be found. It might have been moved or deleted.'
         : 'Something went wrong while processing your request. Please try again later.')
   )
-  const heading = $derived(
-    is404 ? '404 Page Not Found' : '500 Internal Server Error'
-  )
+  const heading = $derived(is404 ? 'Page Not Found' : 'Internal Server Error')
 
-  function goBack() {
-    window.history.back()
+  function goBack(): void {
+    if (window.history.length > 1) {
+      window.history.back()
+    } else {
+      goto('/')
+    }
   }
 </script>
+
+<svelte:head>
+  <title>{heading} | Abdelrahman Rizik</title>
+  <meta
+    name="description"
+    content={abortReason}
+  />
+</svelte:head>
 
 <div class="error-container">
   <div class="error-header">
@@ -32,20 +45,7 @@
       href="/"
       class="button primary-button"
     >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="home-icon"
-      >
-        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
+      <HomeIcon size={16} />
       <span>Back to Home</span>
     </a>
 
@@ -53,19 +53,7 @@
       onclick={goBack}
       class="button secondary-button"
     >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="back-icon"
-      >
-        <path d="m15 18-6-6 6-6" />
-      </svg>
+      <ArrowLeftIcon size={16} />
       <span>Go Back</span>
     </button>
   </div>
@@ -136,31 +124,29 @@
     transition: all 0.2s ease-in-out;
   }
 
+  .primary-button,
+  .secondary-button {
+    border: 1px solid var(--color-gray-200);
+    transition: background-color var(--default-transition-duration)
+      var(--default-transition-timing-function);
+  }
+
   .primary-button {
-    background-color: var(--color-gray-900);
+    background-color: var(--color-sea-blue);
     color: var(--color-white);
-    border: 1px solid var(--color-gray-900);
+
+    &:hover {
+      background-color: var(--color-dark-sea-blue);
+    }
   }
 
   .secondary-button {
-    background-color: transparent;
+    background-color: var(--color-white);
     color: var(--color-gray-900);
-    border: 1px solid var(--color-gray-200);
-  }
 
-  .primary-button:hover {
-    background-color: var(--color-gray-800);
-    border-color: var(--color-gray-800);
-  }
-
-  .secondary-button:hover {
-    border-color: var(--color-gray-900);
-  }
-
-  .home-icon,
-  .back-icon {
-    height: var(--spacing-4);
-    width: var(--spacing-4);
+    &:hover {
+      background-color: var(--color-gray-200);
+    }
   }
 
   @media (max-width: 640px) {

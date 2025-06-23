@@ -52,7 +52,7 @@
     transition: all var(--default-transition-duration)
       var(--default-transition-timing-function);
 
-    &::hover {
+    &:hover {
       background-color: var(--color-gray-200);
       color: var(--color-gray-800);
     }

@@ -13,10 +13,10 @@
 </script>
 
 <svelte:head>
-  <title>Academy - Learn and Grow</title>
+  <title>Abdelrahman Rizik - Software Engineer</title>
   <meta
     name="description"
-    content="Discover tutorials and articles on web development, databases, and more."
+    content="Software Engineer passionate about modern web technologies. I build applications with JavaScript, TypeScript, Vue, React, SvelteKit, and Node.js."
   />
 </svelte:head>
 

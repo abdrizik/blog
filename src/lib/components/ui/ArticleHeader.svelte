@@ -1,7 +1,8 @@
 <script lang="ts">
+  import type { Article } from '$lib/utils/articles.server'
   import { formatDate } from '$lib/utils/formatDate'
 
-  let { metadata } = $props()
+  let { metadata }: { metadata: Article } = $props()
 </script>
 
 <div class="article-header">
@@ -10,9 +11,9 @@
   <dl>
     <dt>Published under</dt>
     <dd>
-      <a href="/articles?category={metadata.category.toLowerCase()}">
-        {metadata.category}
-      </a>
+      <a href="/articles?category={metadata.categorySlug}"
+        >{metadata.category}</a
+      >
     </dd>
 
     <dt>on</dt>
@@ -25,7 +26,7 @@
 
 <style>
   .article-header {
-    margin-bottom: var(--spacing-28);
+    margin-bottom: var(--spacing-16);
 
     max-width: var(--width-3xl);
     margin-inline: auto;

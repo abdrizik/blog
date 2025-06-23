@@ -1,6 +1,6 @@
 <script lang="ts">
   import ArticleHeader from '$lib/components/ui/ArticleHeader.svelte'
-  import RelatedArticles from '../../../lib/components/ui/RelatedArticles.svelte'
+  import RelatedArticles from '$lib/components/ui/RelatedArticles.svelte'
 
   const { data } = $props()
 
@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>{metadata.title}</title>
+  <title>{metadata.title} | Abdelrahman Rizik</title>
   <meta
     name="description"
     content={metadata.description}
