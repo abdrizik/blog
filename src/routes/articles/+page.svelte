@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state'
   import ArticlesList from '$lib/components/ui/ArticlesList.svelte'
+  import CategoryFilter from '$lib/components/ui/CategoryFilter.svelte'
   import PageHeader from '$lib/components/ui/PageHeader.svelte'
   import type { Article, Category } from '$lib/utils/articles.server'
 
@@ -41,22 +42,7 @@
   />
 
   <div>
-    <div class="categories">
-      <a
-        href="/articles"
-        class:active={!selectedCategory}>All</a
-      >
-
-      {#each data.categories as category (category.slug)}
-        <a
-          href="/articles?category={category.slug}"
-          class:active={selectedCategory === category.slug}
-        >
-          {category.name}
-        </a>
-      {/each}
-    </div>
-
+    <CategoryFilter categories={data.categories} {selectedCategory} />
     <ArticlesList articles={filteredArticles} />
   </div>
 </div>
@@ -68,36 +54,5 @@
     gap: var(--spacing-20);
     max-width: var(--width-3xl);
     margin-inline: auto;
-  }
-
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
-    margin-bottom: var(--spacing-8);
-  }
-
-  .categories a {
-    font-size: var(--text-sm);
-    line-height: var(--text-sm--line-height);
-    border-radius: 9999px;
-    border: 1px solid var(--color-gray-200);
-    color: var(--color-gray-600);
-    background-color: white;
-    padding: var(--spacing-1) var(--spacing-3);
-    cursor: pointer;
-    text-decoration: none;
-    transition: al var(--default-transition-duration)
-      var(--default-transition-timing-function);
-  }
-
-  .categories a:hover {
-    background-color: var(--color-gray-200);
-    color: var(--color-gray-800);
-  }
-
-  .categories a.active {
-    background-color: var(--color-gray-900);
-    color: var(--color-white);
   }
 </style>

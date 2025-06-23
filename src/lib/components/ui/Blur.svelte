@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 150px;
     z-index: 1;
     pointer-events: none;
 

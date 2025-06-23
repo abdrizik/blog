@@ -32,11 +32,13 @@
   }
 
   h1 {
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl--line-height);
+    font-size: var(--text-4xl);
     font-family: var(--font-serif);
     font-weight: var(--font-weight-medium);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
 
+    color: var(--color-neutral-800);
     margin-bottom: var(--spacing-6);
   }
 

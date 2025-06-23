@@ -11,10 +11,6 @@ tags:
 publishAt: '2025-02-07'
 ---
 
-# Introduction to Quantum Computing
-
-## Overview
-
 This project is designed to provide a comprehensive example of Markdown usage. It includes various elements such as headings, paragraphs, lists, tables, code snippets, and more.
 
 ## Getting Started
@@ -176,11 +172,6 @@ function greet() {
 }
 ```
 
-#### Indented Code Block
-
-    def hello_world():
-        print("Hello, world!")
-
 ### Tables
 
 | Header 1 | Header 2 | Header 3 |
@@ -191,16 +182,6 @@ function greet() {
 ### Horizontal Rules
 
 ---
-
-### Task Lists
-
-- [x] Task 1
-- [ ] Task 2
-- [ ] Task 3
-
-### Emojis
-
-Here are some emojis: :smile: :heart: :+1: :rocket: :tada:
 
 ### HTML Elements
 
@@ -219,21 +200,9 @@ This is a sentence with a footnote.[^1]
 
 [^1]: This is the footnote.
 
-### Definition Lists
-
-Term 1
-: Definition 1
-
-Term 2
-: Definition 2
-
 ### Strikethrough
 
 This is ~~strikethrough~~ text.
-
-### Highlight
-
-This is ==highlighted== text.
 
 ### Subscript and Superscript
 
@@ -245,20 +214,6 @@ This is E=mc^2^.
 > **Note:** This is an important note.
 >
 > **Warning:** This is a warning.
-
-### Custom Containers
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
 
 ### Syntax Highlighting
 

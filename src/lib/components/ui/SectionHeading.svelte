@@ -13,9 +13,11 @@
 </h2>
 
 <style>
-  .section-heading {
+  h2 {
     font-size: var(--text-sm);
-    color: var(--color-gray-400);
+    line-height: var(--text-sm--line-height);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gray-600);
     margin-bottom: var(--spacing-4);
   }
 </style>
