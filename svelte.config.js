@@ -1,5 +1,7 @@
 import rehypeShiki from '@shikijs/rehype'
 import adapter from '@sveltejs/adapter-auto'
+import remarkGfm from 'remark-gfm'
+
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdPreprocess } from './src/lib/preprocess/markdown.js'
 import syntaxThemeDark from './src/lib/themes/syntax-theme-dark.json' with { type: 'json' }
@@ -41,7 +43,8 @@ const config = {
             ]
           }
         ]
-      ]
+      ],
+      remarkPlugins: [remarkGfm]
     })
   ],
   extensions: ['.svelte', '.md'],
