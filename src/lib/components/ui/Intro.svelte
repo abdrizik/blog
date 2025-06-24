@@ -2,8 +2,8 @@
 </script>
 
 <div class="intro">
-  <h1>Abdelrahman Rizik</h1>
-  <p>
+  <h1 class="fade-in">Abdelrahman Rizik</h1>
+  <p class="fade-in delay-1">
     <em>Building for the web</em>. Focused on frontend development and CSS
     craftsmanship. Working with diverse frameworks to create seamless user
     experiences. Software Engineer at
@@ -13,13 +13,46 @@
       target="_blank">ARD</a
     >.
   </p>
-  <p>
+  <p class="fade-in delay-2">
     Passionate about sharing knowledge through tutorials and exploring new web
     technologies.
   </p>
 </div>
 
 <style>
+  .intro {
+    opacity: 1;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.15s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    60% {
+      opacity: 0.8;
+      transform: translateY(-1px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   h1 {
     font-size: var(--text-lg);
     color: var(--color-gray-900);
@@ -45,6 +78,7 @@
     font-size: var(--text-lg);
 
     color: var(--color-gray-700);
+    transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   a {
@@ -54,11 +88,25 @@
     text-decoration: underline var(--color-gray-400) 1px;
     text-underline-offset: 2px;
 
-    transition: color 0.2s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
   }
 
   a:hover {
     color: var(--color-gray-700);
     text-decoration-color: var(--color-gray-600);
+    transform: translateY(-0.5px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    
+    a:hover {
+      transform: none;
+    }
   }
 </style>
