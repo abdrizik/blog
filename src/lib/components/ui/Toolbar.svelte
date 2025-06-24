@@ -1,50 +1,98 @@
 <script lang="ts">
+  import { page } from '$app/state'
   import ArticlesIcon from '$lib/components/icons/ArticlesIcon.svelte'
   import BlueskyIcon from '$lib/components/icons/BlueskyIcon.svelte'
+  import GitHubIcon from '$lib/components/icons/GitHubIcon.svelte'
   import HomeIcon from '$lib/components/icons/HomeIcon.svelte'
 
   let isDark = $state(false)
+  let href = $derived(page.url.pathname)
 
   function toggleTheme() {
     isDark = !isDark
     document.documentElement.classList.toggle('dark', isDark)
   }
+
+  const navigationLinks = [
+    {
+      href: '/',
+      icon: HomeIcon,
+      label: 'Home',
+      isActive: () => href === '/'
+    },
+    {
+      href: '/articles',
+      icon: ArticlesIcon,
+      label: 'Articles',
+      isActive: () => href.includes('/articles')
+    }
+  ]
+
+  const socialLinks = [
+    {
+      href: 'https://github.com/abdrizik/',
+      icon: GitHubIcon,
+      label: 'GitHub',
+      external: true
+    },
+    {
+      href: 'https://bsky.app/profile/abdrizik.bsky.social',
+      icon: BlueskyIcon,
+      label: 'Bluesky',
+      external: true
+    }
+  ]
 </script>
 
 <div class="toolbar">
   <div class="nav-buttons">
-    <a
-      href="/"
-      class="nav-button"
-      aria-label="Home"
-    >
-      <HomeIcon size={18} />
-    </a>
+    <!-- Navigation Routes -->
+    {#each navigationLinks as link, index}
+      <a
+        href={link.href}
+        class="nav-button"
+        class:active={link.isActive()}
+        aria-label={link.label}
+        style="animation-delay: {0.1 + index * 0.07}s"
+      >
+        <link.icon size={18} />
+      </a>
+    {/each}
 
-    <div class="divider"></div>
+    <div
+      class="divider"
+      style="animation-delay: {0.1 + navigationLinks.length * 0.07}s"
+    ></div>
 
-    <a
-      href="/articles"
-      class="nav-button"
-      aria-label="Articles"
-    >
-      <ArticlesIcon size={18} />
-    </a>
+    <!-- Social Accounts -->
+    {#each socialLinks as link, index}
+      <a
+        class="nav-button"
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.label}
+        style="animation-delay: {0.1 +
+          (navigationLinks.length + 1 + index) * 0.07}s"
+      >
+        {#key link.icon}
+          <link.icon size={18} />
+        {/key}
+      </a>
+    {/each}
 
-    <a
-      class="nav-button"
-      href="https://bsky.app/profile/abdrizik.bsky.social"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Bluesky"
-    >
-      <BlueskyIcon size={18} />
-    </a>
+    <div
+      class="divider"
+      style="animation-delay: {0.1 +
+        (navigationLinks.length + socialLinks.length + 1) * 0.07}s"
+    ></div>
 
+    <!-- Theme Toggle -->
     <button
       class="nav-button"
-      onclick={toggleTheme}
       aria-label="Toggle theme"
+      style="animation-delay: {0.1 +
+        (navigationLinks.length + socialLinks.length + 2) * 0.07}s"
     >
       <div
         class="dot"
@@ -103,11 +151,10 @@
   .divider {
     width: 1px;
     height: var(--spacing-6);
-    background: var(--color-neutral-300);
+    background: var(--color-neutral-200);
     align-self: center;
     opacity: 0;
     animation: fadeInUp 0.3s var(--ease-out) forwards;
-    animation-delay: calc(0.1s + 1 * 0.07s);
   }
 
   .nav-buttons {
@@ -129,25 +176,53 @@
     color: inherit;
     padding: 0;
     opacity: 0;
+    position: relative;
     transition:
       background-color var(--default-transition-duration)
         var(--default-transition-timing-function),
       transform var(--default-transition-duration)
+        var(--default-transition-timing-function),
+      color var(--default-transition-duration)
         var(--default-transition-timing-function);
     animation: fadeInUp 0.3s var(--ease-out) forwards;
   }
 
-  .nav-buttons > :nth-child(1) {
-    animation-delay: calc(0.1s + 0 * 0.07s);
+  .nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 4px;
+    height: 4px;
+    background: var(--color-sea-blue);
+    border-radius: var(--radius-full);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  .nav-buttons > :nth-child(3) {
-    animation-delay: calc(0.1s + 2 * 0.07s);
+
+  .nav-button.active {
+    color: var(--color-sea-blue);
   }
-  .nav-buttons > :nth-child(4) {
-    animation-delay: calc(0.1s + 3 * 0.07s);
+
+  .nav-button.active::after {
+    opacity: 1;
+    transform: scale(1);
+    animation: dotBounce 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  .nav-buttons > :nth-child(5) {
-    animation-delay: calc(0.1s + 4 * 0.07s);
+
+  @keyframes dotBounce {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .nav-button:hover {
