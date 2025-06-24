@@ -63,4 +63,4 @@ This blog will cover a variety of topics including:
 - **Programming Tutorials** - Step-by-step guides and hands-on projects
 - **Technology Trends** - Latest tools, frameworks, and industry insights
 
-Thanks for visiting, and welcome to the journey! 🚀
+Thanks for visiting, and welcome to the journey!
