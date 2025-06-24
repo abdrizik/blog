@@ -18,7 +18,7 @@
     {
       title: 'Web Pioneers',
       description:
-        'A tribute to the visionaries who shaped the web, showcasing the people behind groundbreaking innovations like GitHub and others.',
+        'A tribute to the visionaries who shaped the web, showcasing the people behind groundbreaking innovations like Linux and others.',
       status: 'Soon'
     }
   ]
