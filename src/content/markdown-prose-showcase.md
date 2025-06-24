@@ -13,8 +13,6 @@ tags:
 featured: true
 ---
 
-# Markdown & Prose Showcase
-
 Welcome to the complete markdown and prose showcase! This article demonstrates every possible markdown element using real-world examples from web development, programming, and design systems.
 
 This showcase serves as both a writer's reference and a comprehensive test of our prose styling. Each example reflects the kind of content you'll find in tutorials, documentation, and technical articles.
@@ -32,9 +30,11 @@ When building scalable applications, CSS architecture becomes crucial. The `BEM 
 Design systems ensure consistency across large applications. They typically include:
 
 ##### Color Tokens
+
 Design tokens define the visual language of your application.
 
 ###### Component Libraries
+
 Reusable UI components that implement the design system.
 
 ## Real-World Development Scenarios
@@ -178,8 +178,8 @@ func main() {
   grid-template-columns: 250px 1fr; /* [!code highlight] */
   grid-template-rows: 60px 1fr;
   grid-template-areas:
-    "sidebar header"
-    "sidebar content"; /* [!code focus] */
+    'sidebar header'
+    'sidebar content'; /* [!code focus] */
   height: 100vh;
 }
 
@@ -205,7 +205,8 @@ func main() {
 // Old authentication approach
 class AuthService {
   async login(email: string, password: string) {
-    const response = await fetch('/api/login', { // [!code --]
+    const response = await fetch('/api/login', {
+      // [!code --]
       method: 'POST', // [!code --]
       body: JSON.stringify({ email, password }) // [!code --]
     }) // [!code --]
@@ -216,20 +217,25 @@ class AuthService {
 
 // New authentication with proper error handling
 class AuthService {
-  async login(email: string, password: string): Promise<AuthResult> { // [!code ++]
-    try { // [!code ++]
-      const response = await fetch('/api/auth/login', { // [!code ++]
+  async login(email: string, password: string): Promise<AuthResult> {
+    // [!code ++]
+    try {
+      // [!code ++]
+      const response = await fetch('/api/auth/login', {
+        // [!code ++]
         method: 'POST', // [!code ++]
         headers: { 'Content-Type': 'application/json' }, // [!code ++]
         body: JSON.stringify({ email, password }) // [!code ++]
       }) // [!code ++]
 
-      if (!response.ok) { // [!code ++]
+      if (!response.ok) {
+        // [!code ++]
         throw new Error(`Authentication failed: ${response.status}`) // [!code ++]
       } // [!code ++]
 
       return await response.json() // [!code ++]
-    } catch (error) { // [!code ++]
+    } catch (error) {
+      // [!code ++]
       console.error('Login error:', error) // [!code ++]
       throw error // [!code ++]
     } // [!code ++]
@@ -271,33 +277,33 @@ docker run -p 3000:3000 --env-file .env.production myapp
 
 ### Frontend Framework Comparison
 
-| Framework | Bundle Size | Learning Curve | Performance | Ecosystem |
-| --------- | ----------- | -------------- | ----------- | --------- |
-| **React** | ~45kb       | Medium         | Excellent   | Massive   |
-| **Vue**   | ~35kb       | Easy           | Excellent   | Large     |
-| **Svelte** | ~10kb      | Easy           | Outstanding | Growing   |
-| **Angular** | ~130kb    | Steep          | Good        | Enterprise |
+| Framework   | Bundle Size | Learning Curve | Performance | Ecosystem  |
+| ----------- | ----------- | -------------- | ----------- | ---------- |
+| **React**   | ~45kb       | Medium         | Excellent   | Massive    |
+| **Vue**     | ~35kb       | Easy           | Excellent   | Large      |
+| **Svelte**  | ~10kb       | Easy           | Outstanding | Growing    |
+| **Angular** | ~130kb      | Steep          | Good        | Enterprise |
 
 ### CSS Framework Features
 
-| Feature              | Tailwind CSS | Bootstrap | Bulma    | Foundation |
-| -------------------- | ------------ | --------- | -------- | ---------- |
-| **Utility-first**   | ✅           | ❌        | ❌       | ❌         |
-| **Component-based**  | ❌           | ✅        | ✅       | ✅         |
-| **Customizable**    | ✅           | ✅        | ✅       | ✅         |
-| **Bundle Size**     | Custom       | ~25kb     | ~186kb   | ~90kb      |
-| **Grid System**     | CSS Grid     | Flexbox   | Flexbox  | Flexbox    |
-| **Dark Mode**       | Built-in     | Manual    | Manual   | Manual     |
-| **Learning Curve**  | Medium       | Easy      | Easy     | Medium     |
+| Feature             | Tailwind CSS | Bootstrap | Bulma   | Foundation |
+| ------------------- | ------------ | --------- | ------- | ---------- |
+| **Utility-first**   | ✅           | ❌        | ❌      | ❌         |
+| **Component-based** | ❌           | ✅        | ✅      | ✅         |
+| **Customizable**    | ✅           | ✅        | ✅      | ✅         |
+| **Bundle Size**     | Custom       | ~25kb     | ~186kb  | ~90kb      |
+| **Grid System**     | CSS Grid     | Flexbox   | Flexbox | Flexbox    |
+| **Dark Mode**       | Built-in     | Manual    | Manual  | Manual     |
+| **Learning Curve**  | Medium       | Easy      | Easy    | Medium     |
 
 ### Database Performance Metrics
 
-| Database   | Read Speed | Write Speed | Scalability | Use Case       |
-| ---------- | ---------- | ----------- | ----------- | -------------- |
+| Database   | Read Speed | Write Speed | Scalability | Use Case        |
+| ---------- | ---------- | ----------- | ----------- | --------------- |
 | PostgreSQL | Fast       | Fast        | Excellent   | General purpose |
-| MongoDB    | Very Fast  | Fast        | Excellent   | Document store |
-| Redis      | Lightning  | Lightning   | Good        | Caching        |
-| SQLite     | Fast       | Medium      | Limited     | Small apps     |
+| MongoDB    | Very Fast  | Fast        | Excellent   | Document store  |
+| Redis      | Lightning  | Lightning   | Good        | Caching         |
+| SQLite     | Fast       | Medium      | Limited     | Small apps      |
 
 ---
 
