@@ -1,6 +1,5 @@
 <script lang="ts">
   import Blur from '$lib/components/ui/Blur.svelte'
-  import Header from '$lib/components/ui/Header.svelte'
   import Toolbar from '$lib/components/ui/Toolbar.svelte'
   import '$lib/styles/main.css'
 
@@ -9,7 +8,6 @@
 
 <div>
   <div class="layout">
-    <Header />
     <main>
       {@render children()}
     </main>
@@ -30,6 +28,7 @@
     margin-inline: auto;
     padding-inline: var(--spacing-4);
     padding-bottom: var(--spacing-48);
+    padding-top: var(--spacing-40);
 
     font-optical-sizing: auto;
     font-family: var(--default-font-family);
