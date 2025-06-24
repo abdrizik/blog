@@ -106,7 +106,7 @@
       opacity: 1;
       transform: none;
     }
-    
+
     a:hover {
       transform: none;
     }
