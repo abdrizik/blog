@@ -141,7 +141,6 @@
 
     border-radius: var(--radius-xl);
     padding: var(--spacing-2) var(--spacing-4);
-    box-shadow: var(--shadow-lg);
     border: 1px solid var(--color-neutral-200);
     z-index: 5;
 
