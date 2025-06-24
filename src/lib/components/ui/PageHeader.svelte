@@ -7,7 +7,7 @@
   let { title, description }: Props = $props()
 </script>
 
-<div class="articles-header">
+<div>
   <h1>
     {title}
   </h1>
@@ -18,19 +18,18 @@
 </div>
 
 <style>
-  .articles-header h1 {
+  h1 {
     font-family: var(--font-serif);
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl--line-height);
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
     font-weight: var(--font-weight-medium);
 
     margin-bottom: var(--spacing-6);
   }
 
-  .articles-header p {
+  p {
     color: var(--color-gray-500);
     font-weight: var(--font-weight-normal);
-    font-size: var(--text-base);
     line-height: var(--text-base--line-height);
     text-wrap: pretty;
   }
