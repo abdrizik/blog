@@ -21,10 +21,6 @@
 </svelte:head>
 
 <div class="home-page">
-  <!-- <PageHeader
-    title="I design. I code. I learn."
-    description="Currently at Ard. Re:Coded alum. I focus on frontend because I care about how things look and feel. I mess with CSS, draw with code, and keep learning every day."
-  /> -->
   <Intro />
 
   <LatestArticles articles={data.articles} />
@@ -41,5 +37,11 @@
 
     max-width: var(--width-3xl);
     margin-inline: auto;
+  }
+
+  @media (max-width: 48rem) {
+    .home-page {
+      gap: var(--spacing-16);
+    }
   }
 </style>
