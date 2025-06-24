@@ -127,7 +127,7 @@
 
   .toolbar {
     position: fixed;
-    bottom: var(--spacing-4);
+    bottom: var(--spacing-6);
     left: 50%;
     transform: translateX(-50%);
 
