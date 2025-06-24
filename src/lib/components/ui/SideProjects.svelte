@@ -7,7 +7,7 @@
       title: 'CSS Arena',
       description: 'A collection of creative solutions for CSS Battles.',
       status: 'Live',
-      url: 'https://css-arena.netlify.app/'
+      url: 'https://css-arena.abdrizik.xyz/'
     },
     {
       title: 'Secret Sauce',
