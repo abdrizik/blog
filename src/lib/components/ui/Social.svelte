@@ -1,24 +1,9 @@
 <script lang="ts">
   import SectionHeading from './SectionHeading.svelte'
-
-  const socialPlatforms = [
-    {
-      label: 'Bluesky',
-      href: ''
-    },
-    {
-      label: 'LinkedIn',
-      href: ''
-    },
-    {
-      label: 'GitHub',
-      href: ''
-    }
-  ]
 </script>
 
 <section>
-  <SectionHeading>Content</SectionHeading>
+  <SectionHeading>Get in touch</SectionHeading>
 
   <p>
     Reach me at <a
