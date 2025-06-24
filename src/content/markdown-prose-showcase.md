@@ -1,7 +1,7 @@
 ---
 title: 'Markdown & Prose Showcase'
 description: 'A comprehensive showcase of all markdown elements and prose styling - from headings and code blocks to tables and advanced features'
-publishAt: '2025-06-23'
+publishAt: '2025-06-20'
 category: 'Showcase'
 categorySlug: 'showcase'
 tags:
@@ -10,7 +10,6 @@ tags:
   - 'styling'
   - 'showcase'
   - 'examples'
-featured: true
 ---
 
 Welcome to the complete markdown and prose showcase! This article demonstrates every possible markdown element using real-world examples from web development, programming, and design systems.

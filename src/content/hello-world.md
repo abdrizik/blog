@@ -7,14 +7,14 @@ tags:
   - introduction
   - getting-started
   - welcome
-publishAt: '2025-01-10'
+publishAt: '2025-06-24'
 ---
 
 <script>
 import BookCover from '$lib/components/content/BookCover.svelte';
 </script>
 
-Welcome to my blog! 👋
+Welcome to my blog!
 
 This is the traditional first post that every developer writes when starting something new. Think of it as a digital handshake—simple, friendly, and full of possibility.
 
