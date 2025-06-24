@@ -166,7 +166,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Site**: [abdrizik.xyz](https://abdrizik.xyz) (coming soon)
+- **Live Site**: [abdrizik.xyz](https://abdrizik.xyz)
 - **Author**: [Abdelrahman Rizik](https://github.com/abdrizik)
 - **Built with**: [SvelteKit](https://kit.svelte.dev/)
 
