@@ -26,11 +26,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: var(--spacing-8);
-  }
-
-  img {
     margin-inline: auto;
-    max-width: 450px;
   }
 
   .book-wrapper {
@@ -50,6 +46,8 @@
     display: block;
     object-fit: cover;
     aspect-ratio: 3/4;
+
+    max-width: 450px;
   }
 
   .book-caption {
@@ -63,7 +61,7 @@
 
   @media (max-width: 640px) {
     .book-cover {
-      max-width: 250px;
+      max-width: 300px;
     }
   }
 </style>
