@@ -42,17 +42,19 @@
     color: var(--color-gray-600);
   }
   a {
-    color: var(--color-gray-900);
-
-    text-decoration: none;
-    text-decoration: underline var(--color-gray-400) 1px;
+    color: var(--color-sea-blue);
+    font-weight: var(--font-weight-medium);
+    text-decoration: underline;
+    text-decoration-color: transparent;
     text-underline-offset: 2px;
 
-    transition: color 0.2s ease;
+    transition-property: color, text-decoration-color;
+    transition-duration: var(--default-transition-duration);
+    transition-timing-function: var(--default-transition-timing-function);
   }
 
   a:hover {
-    color: var(--color-gray-700);
-    text-decoration-color: var(--color-gray-600);
+    color: var(--color-dark-sea-blue);
+    text-decoration-color: var(--color-dark-sea-blue);
   }
 </style>
