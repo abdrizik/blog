@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns:
     1fr
-    min(var(--width-3xl), calc(100% - 2 * var(--spacing-4)))
+    min(var(--width-3xl), 100%)
     1fr;
 
   color: var(--color-gray-600);
