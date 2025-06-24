@@ -1,13 +1,10 @@
-import { dev } from '$app/environment'
-import { PUBLIC_SITE_URL } from '$env/static/public'
 import { getArticles } from '$lib/utils/articles.server'
 
 export async function GET({ url }) {
   const articles = getArticles()
 
-  const baseUrl = dev
-    ? `${url.protocol}//${url.host}`
-    : PUBLIC_SITE_URL.replace(/\/$/, '')
+  // Always use the request URL - works in dev and production
+  const baseUrl = `${url.protocol}//${url.host}`.replace(/\/$/, '')
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
