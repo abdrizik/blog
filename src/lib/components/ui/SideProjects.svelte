@@ -39,7 +39,10 @@
             <div class="project-header">
               <h3 class="project-title">
                 <span>{project.title}</span>
-                <ArrowUpRightIcon class="arrow-icon" />
+                <ArrowUpRightIcon
+                  size={16}
+                  class="arrow-icon"
+                />
               </h3>
               <span
                 class="project-status"

@@ -1,7 +1,7 @@
 <script lang="ts">
+  import Blur from '$lib/components/ui/Blur.svelte'
   import Header from '$lib/components/ui/Header.svelte'
   import Toolbar from '$lib/components/ui/Toolbar.svelte'
-  import Blur from '$lib/components/ui/Blur.svelte'
   import '$lib/styles/main.css'
 
   const { children } = $props()
@@ -23,16 +23,17 @@
     /* display: grid; */
     /* grid-template-rows: auto 1fr auto; */
 
+    background: var(--color-cream);
     max-width: var(--width-8xl);
-    margin-inline: auto;
-
     min-height: 100svh;
 
+    margin-inline: auto;
     padding-inline: var(--spacing-4);
-
-    font-family: var(--font-sans);
-    font-optical-sizing: auto;
-
     padding-bottom: var(--spacing-48);
+
+    font-optical-sizing: auto;
+    font-family: var(--default-font-family);
+    font-feature-settings: var(--default-font-feature-settings);
+    font-variation-settings: var(--default-font-variation-settings);
   }
 </style>

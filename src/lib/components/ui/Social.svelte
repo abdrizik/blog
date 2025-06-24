@@ -42,19 +42,17 @@
     color: var(--color-gray-600);
   }
   a {
-    text-decoration: underline;
-    text-decoration-color: var(--color-gray-300);
-    text-decoration-thickness: 0.5px;
-    text-underline-offset: 4px;
-    text-decoration-style: solid;
+    color: var(--color-gray-900);
 
-    color: var(--color-gray-800);
+    text-decoration: none;
+    text-decoration: underline var(--color-gray-400) 1px;
+    text-underline-offset: 2px;
+
+    transition: color 0.2s ease;
   }
 
-  /* Alternative: using border for more control */
-  /* a {
-    text-decoration: none;
-    border-bottom: 2px solid var(--color-blue-500);
-    padding-bottom: 1px;
-  } */
+  a:hover {
+    color: var(--color-gray-700);
+    text-decoration-color: var(--color-gray-600);
+  }
 </style>

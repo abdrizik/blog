@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Article } from '$lib/types'
   import { formatDate } from '$lib/utils/formatDate'
+  import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte'
 
   interface Props {
     article: Article
@@ -32,20 +33,10 @@
       <span>
         {article.title}
       </span>
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+      <ArrowRightIcon
+        size={16}
         class="arrow-icon"
-      >
-        <path d="M5 12h14" />
-        <path d="m12 5 7 7-7 7" />
-      </svg>
+      />
     </h3>
 
     {#if showDescription}
@@ -63,15 +54,16 @@
 </a>
 
 <style>
-  .article-content {
-    display: flex;
-    flex-direction: column;
+  .article {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    border-radius: var(--radius-md);
   }
 
-  .article-category {
-    font-size: var(--text-sm);
-    line-height: var(--text-sm--line-height);
-    color: var(--color-gray-500);
+  h3 {
+    color: var(--color-neutral-800);
   }
 
   .article-title {
@@ -83,23 +75,26 @@
     gap: var(--spacing-2);
   }
 
-  .arrow-icon {
+  .article-title :global(.arrow-icon) {
     opacity: 0;
     transition: opacity var(--default-transition-duration)
       var(--default-transition-timing-function);
   }
 
-  .article:hover .arrow-icon {
+  .article:hover .article-title :global(.arrow-icon) {
     opacity: 1;
   }
 
   .article-description {
     margin-top: var(--spacing-2);
     color: var(--color-gray-600);
+
+    max-width: var(--width-prose);
   }
 
   .article-meta {
-    margin-top: var(--spacing-4);
+    margin-top: var(--spacing-3);
+    display: block;
 
     font-size: var(--text-sm);
     line-height: var(--text-sm--line-height);

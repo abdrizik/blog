@@ -29,15 +29,4 @@
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-
-  --color-cream: #f4f4f4;
-  --color-sea-blue: #04a5bb;
-  --color-medium-sea-blue: #008ba3;
-  --color-dark-sea-blue: #00758f;
-}
-
-body {
-  background: var(--color-cream);
-
-  font-family: var(--font-sans);
 }

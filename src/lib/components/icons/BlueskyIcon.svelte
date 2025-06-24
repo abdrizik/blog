@@ -3,7 +3,7 @@
     size?: number | string
   }
 
-  const { size = 20 }: Props = $props()
+  let { size = 20 }: Props = $props()
 </script>
 
 <svg

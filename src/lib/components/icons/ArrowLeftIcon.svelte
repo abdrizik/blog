@@ -1,9 +1,10 @@
 <script lang="ts">
   interface Props {
     size?: number | string
+    class?: string
   }
-  
-  const { size = 16 }: Props = $props()
+
+  let { size = 20, class: className = '' }: Props = $props()
 </script>
 
 <svg
@@ -15,6 +16,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class={className}
 >
   <path d="m15 18-6-6 6-6" />
 </svg>

@@ -274,6 +274,11 @@
   --color-black: #000;
   --color-white: #fff;
 
+  --color-cream: #f4f4f4;
+  --color-sea-blue: #04a5bb;
+  --color-medium-sea-blue: #008ba3;
+  --color-dark-sea-blue: #00758f;
+
   /* Spacing */
   --spacing-px: 1px;
   --spacing-0: 0px;

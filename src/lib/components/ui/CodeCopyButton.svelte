@@ -19,7 +19,7 @@
 <button
   onclick={copyToClipboard}
   class="copy-code-button"
-  title="Copy code"
+  class:copied={clicked}
   aria-label="Copy code to clipboard"
 >
   {#if clicked}
@@ -36,20 +36,32 @@
     right: var(--spacing-3);
     z-index: 10;
     padding: var(--spacing-1);
-    border-radius: 0.375rem;
-    opacity: 0.7;
+    border-radius: var(--radius-md);
     border: none;
     background-color: transparent;
+    color: var(--color-dark-sea-blue);
     cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
+    transition: all var(--default-transition-duration)
+      var(--default-transition-timing-function);
+    opacity: 0.6;
   }
 
   .copy-code-button:hover {
+    color: var(--color-sea-blue);
     opacity: 1;
   }
 
+  .copy-code-button.copied {
+    color: var(--color-sea-blue);
+    opacity: 1;
+  }
+
+  .copy-code-button.copied:hover {
+    color: var(--color-medium-sea-blue);
+  }
+
   .copy-code-button :global(.icon) {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
   }
 </style>

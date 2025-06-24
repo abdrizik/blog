@@ -12,9 +12,7 @@
 </script>
 
 <section>
-  <SectionHeading>
-    Some amazing people I have collaborated with
-  </SectionHeading>
+  <SectionHeading>Some amazing people I have collaborated with</SectionHeading>
 
   <div class="collaborators">
     {#each collaborators as collaborator, index (index)}
