@@ -34,7 +34,12 @@
   .logo {
     width: 3rem;
     height: 3rem;
-    background-color: #d1fae5;
-    border-radius: 0.5rem;
+    background: oklch(from var(--color-sea-blue) l c h / 0.2);
+    border-radius: var(--radius-md);
+    transition: all var(--default-transition-duration) var(--ease-out);
+
+    &:hover {
+      background: oklch(from var(--color-sea-blue) l c h / 0.3);
+    }
   }
 </style>

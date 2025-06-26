@@ -82,10 +82,12 @@
       var(--default-transition-timing-function);
   }
 
-  .article:hover {
-    h3 :global(.arrow-icon) {
-      opacity: 1;
-    }
+  .article:hover h3 {
+    color: var(--color-dark-sea-blue);
+  }
+
+  .article:hover h3 :global(.arrow-icon) {
+    opacity: 1;
   }
 
   .article-description {

@@ -271,13 +271,13 @@
   --color-stone-900: oklch(0.216 0.006 56.043);
   --color-stone-950: oklch(0.147 0.004 49.25);
 
-  --color-black: #000;
-  --color-white: #fff;
+  --color-black: oklch(0 0 0);
+  --color-white: oklch(1 0 0);
 
-  --color-cream: #f4f4f4;
-  --color-sea-blue: #04a5bb;
-  --color-medium-sea-blue: #008ba3;
-  --color-dark-sea-blue: #00758f;
+  --color-cream: oklch(0.965 0.005 85);
+  --color-sea-blue: oklch(0.715 0.143 215.22);
+  --color-medium-sea-blue: oklch(0.609 0.126 221.72);
+  --color-dark-sea-blue: oklch(0.52 0.105 223.13);
 
   /* Spacing */
   --spacing-px: 1px;
