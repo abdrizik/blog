@@ -1,6 +1,6 @@
 ---
 title: 'Hello World'
-description: 'A simple introduction to the blog - every journey begins with a single step.'
+description: 'A warm introduction to the blog and exploring the timeless tradition of "Hello World" in programming.'
 category: 'Getting Started'
 categorySlug: 'getting-started'
 tags:

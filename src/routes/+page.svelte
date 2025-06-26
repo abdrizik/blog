@@ -4,6 +4,7 @@
   import SideProjects from '$lib/components/ui/SideProjects.svelte'
   import Social from '$lib/components/ui/Social.svelte'
   import type { Article } from '$lib/types'
+  import Inspirations from '$lib/components/ui/Inspirations.svelte'
 
   interface PageData {
     articles: Article[]
@@ -25,6 +26,8 @@
 
   <LatestArticles articles={data.articles} />
   <SideProjects />
+
+  <Inspirations />
 
   <Social />
 </div>

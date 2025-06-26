@@ -20,7 +20,7 @@
 
 <style>
   .layout {
-    background: var(--color-cream);
+    background: var(--color-neutral-100);
     max-width: var(--width-8xl);
     min-height: 100svh;
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Link from './Link.svelte'
 </script>
 
 <div class="intro">
@@ -7,11 +8,13 @@
     <em>Building for the web</em>. Focused on frontend development and CSS
     craftsmanship. Working with diverse frameworks to create seamless user
     experiences. Software Engineer at
-    <a
+    <Link
       href="https://ard.co"
       rel="noopener"
-      target="_blank">ARD</a
-    >.
+      target="_blank"
+    >
+      ARD
+    </Link>.
   </p>
   <p class="fade-in delay-2">
     Passionate about sharing knowledge through tutorials and exploring new web
@@ -81,33 +84,10 @@
     transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  a {
-    color: var(--color-sea-blue);
-    font-weight: var(--font-weight-medium);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 2px;
-
-    transition-property: color, text-decoration-color;
-    transition-duration: var(--default-transition-duration);
-    transition-timing-function: var(--default-transition-timing-function);
-    position: relative;
-  }
-
-  a:hover {
-    color: var(--color-dark-sea-blue);
-    text-decoration-color: var(--color-dark-sea-blue);
-    transform: translateY(-0.5px);
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .fade-in {
       animation: none;
       opacity: 1;
-      transform: none;
-    }
-
-    a:hover {
       transform: none;
     }
   }

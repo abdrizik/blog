@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Article } from '$lib/utils/articles.server'
   import { formatDate } from '$lib/utils/formatDate'
+  import Link from './Link.svelte'
 
   let { metadata }: { metadata: Article } = $props()
 </script>
@@ -11,9 +12,9 @@
   <dl>
     <dt>Published under</dt>
     <dd>
-      <a href="/articles?category={metadata.categorySlug}"
-        >{metadata.category}</a
-      >
+      <Link href="/articles?category={metadata.categorySlug}">
+        {metadata.category}
+      </Link>
     </dd>
 
     <dt>on</dt>
@@ -55,9 +56,5 @@
 
   dd {
     color: var(--color-neutral-800);
-  }
-
-  dd:first-of-type {
-    font-weight: var(--font-weight-medium);
   }
 </style>

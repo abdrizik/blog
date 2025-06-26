@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Link from './Link.svelte'
   import SectionHeading from './SectionHeading.svelte'
 </script>
 
@@ -6,40 +7,25 @@
   <SectionHeading>Get in touch</SectionHeading>
 
   <p>
-    Reach me at <a
+    Reach me at
+    <Link
       href="https://bsky.app/profile/abdrizik.bsky.social"
       target="_blank"
     >
       @abdrizik
-    </a>
+    </Link>
     or
-    <a
+    <Link
       href="mailto:abdelrahman.rizik@gmail.com"
       target="_blank"
     >
       abdelrahman.rizik@gmail.com
-    </a>.
+    </Link>.
   </p>
 </section>
 
 <style>
   p {
     color: var(--color-gray-600);
-  }
-  a {
-    color: var(--color-sea-blue);
-    font-weight: var(--font-weight-medium);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 2px;
-
-    transition-property: color, text-decoration-color;
-    transition-duration: var(--default-transition-duration);
-    transition-timing-function: var(--default-transition-timing-function);
-  }
-
-  a:hover {
-    color: var(--color-dark-sea-blue);
-    text-decoration-color: var(--color-dark-sea-blue);
   }
 </style>

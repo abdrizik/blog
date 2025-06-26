@@ -1,7 +1,7 @@
 <script lang="ts">
+  import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte'
   import type { Article } from '$lib/types'
   import { formatDate } from '$lib/utils/formatDate'
-  import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte'
 
   interface Props {
     article: Article
@@ -29,7 +29,7 @@
       </span>
     {/if}
 
-    <h3 class="article-title">
+    <h3>
       <span>
         {article.title}
       </span>
@@ -64,25 +64,28 @@
 
   h3 {
     color: var(--color-neutral-800);
-  }
 
-  .article-title {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
 
     display: flex;
     align-items: center;
     gap: var(--spacing-2);
+
+    transition: color var(--default-transition-duration)
+      var(--default-transition-timing-function);
   }
 
-  .article-title :global(.arrow-icon) {
+  h3 :global(.arrow-icon) {
     opacity: 0;
     transition: opacity var(--default-transition-duration)
       var(--default-transition-timing-function);
   }
 
-  .article:hover .article-title :global(.arrow-icon) {
-    opacity: 1;
+  .article:hover {
+    h3 :global(.arrow-icon) {
+      opacity: 1;
+    }
   }
 
   .article-description {
