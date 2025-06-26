@@ -116,7 +116,6 @@
     height: 20px;
     border-radius: var(--radius-full);
     object-fit: cover;
-    border: 1px solid var(--color-gray-200);
   }
 
   .name {
