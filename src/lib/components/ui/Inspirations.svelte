@@ -122,7 +122,6 @@
     color: var(--color-white);
   }
 
-  /* Mobile responsive */
   @media (max-width: 640px) {
     .inspirations {
       gap: var(--spacing-2);
