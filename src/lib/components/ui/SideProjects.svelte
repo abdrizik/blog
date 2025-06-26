@@ -174,7 +174,6 @@
     flex: 1;
   }
 
-  /* Mobile responsive */
   @media (max-width: 640px) {
     .projects {
       grid-template-columns: 1fr;
@@ -182,16 +181,6 @@
 
     .project {
       padding: var(--spacing-4);
-    }
-
-    .project-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--spacing-2);
-    }
-
-    .project-status {
-      align-self: flex-start;
     }
   }
 </style>
