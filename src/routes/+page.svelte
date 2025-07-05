@@ -19,6 +19,30 @@
     name="description"
     content="Software Engineer passionate about modern web technologies. I build applications with JavaScript, TypeScript, Vue, React, SvelteKit, and Node.js."
   />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdelrahman Rizik - Software Engineer" />
+  <meta
+    property="og:description"
+    content="Software Engineer passionate about modern web technologies. I build applications with JavaScript, TypeScript, Vue, React, SvelteKit, and Node.js."
+  />
+  <meta property="og:url" content="https://abdrizik.xyz/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="Abdelrahman Rizik - Software Engineer" />
+  <meta
+    name="twitter:description"
+    content="Software Engineer passionate about modern web technologies. I build applications with JavaScript, TypeScript, Vue, React, SvelteKit, and Node.js."
+  />
+
+  <!-- Keywords -->
+  <meta
+    name="keywords"
+    content="Abdelrahman Rizik, Software Engineer, JavaScript, TypeScript, Vue, React, SvelteKit, Node.js, Web Development"
+  />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://abdrizik.xyz/" />
 </svelte:head>
 
 <div class="home-page">

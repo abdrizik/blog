@@ -3,7 +3,6 @@ import { getArticles } from '$lib/utils/articles.server'
 export async function GET({ url }) {
   const articles = getArticles()
 
-  // Always use the request URL - works in dev and production
   const baseUrl = `${url.protocol}//${url.host}`.replace(/\/$/, '')
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -41,8 +40,7 @@ export async function GET({ url }) {
   return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
-      'X-Robots-Tag': 'noindex' // Don't index the sitemap itself
+      'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
     }
   })
 }
