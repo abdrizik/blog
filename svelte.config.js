@@ -4,7 +4,6 @@ import remarkGfm from 'remark-gfm'
 
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdPreprocess } from './src/lib/preprocess/markdown.js'
-import syntaxThemeDark from './src/lib/themes/syntax-theme-dark.json' with { type: 'json' }
 import syntaxThemeLight from './src/lib/themes/syntax-theme-light.json' with { type: 'json' }
 
 import {
@@ -28,10 +27,7 @@ const config = {
         [
           rehypeShiki,
           {
-            themes: {
-              dark: syntaxThemeDark,
-              light: syntaxThemeLight
-            },
+            theme: syntaxThemeLight,
             transformers: [
               transformerNotationDiff(),
               transformerMetaHighlight(),
