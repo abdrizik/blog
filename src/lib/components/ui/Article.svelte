@@ -59,6 +59,16 @@
     color: inherit;
 
     border-radius: var(--radius-md);
+
+    &:hover {
+      h3 {
+        color: var(--color-sea-blue);
+      }
+
+      .arrow-icon {
+        opacity: 1;
+      }
+    }
   }
 
   h3 {
@@ -79,14 +89,6 @@
     opacity: 0;
     transition: opacity var(--default-transition-duration)
       var(--default-transition-timing-function);
-  }
-
-  .article:hover h3 {
-    color: var(--color-dark-sea-blue);
-  }
-
-  .article:hover .arrow-icon {
-    opacity: 1;
   }
 
   .article-description {
