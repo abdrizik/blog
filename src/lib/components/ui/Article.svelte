@@ -33,10 +33,9 @@
       <span>
         {article.title}
       </span>
-      <ArrowRightIcon
-        size={16}
-        class="arrow-icon"
-      />
+      <span class="arrow-icon">
+        <ArrowRightIcon size={16} />
+      </span>
     </h3>
 
     {#if showDescription}
@@ -76,7 +75,7 @@
       var(--default-transition-timing-function);
   }
 
-  h3 :global(.arrow-icon) {
+  .arrow-icon {
     opacity: 0;
     transition: opacity var(--default-transition-duration)
       var(--default-transition-timing-function);
@@ -86,7 +85,7 @@
     color: var(--color-dark-sea-blue);
   }
 
-  .article:hover h3 :global(.arrow-icon) {
+  .article:hover .arrow-icon {
     opacity: 1;
   }
 

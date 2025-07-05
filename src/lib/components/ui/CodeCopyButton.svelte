@@ -23,9 +23,13 @@
   aria-label="Copy code to clipboard"
 >
   {#if clicked}
-    <ClipboardClicked class="icon" />
+    <span class="icon">
+      <ClipboardClicked />
+    </span>
   {:else}
-    <Clipboard class="icon" />
+    <span class="icon">
+      <Clipboard />
+    </span>
   {/if}
 </button>
 
@@ -60,7 +64,7 @@
     color: var(--color-medium-sea-blue);
   }
 
-  .copy-code-button :global(.icon) {
+  .copy-code-button .icon {
     font-size: var(--text-lg);
     line-height: var(--text-lg--line-height);
   }

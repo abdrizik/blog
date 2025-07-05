@@ -39,10 +39,9 @@
             <div class="project-header">
               <h3 class="project-title">
                 <span>{project.title}</span>
-                <ArrowUpRightIcon
-                  size={16}
-                  class="arrow-icon"
-                />
+                <span class="arrow-icon">
+                  <ArrowUpRightIcon size={16} />
+                </span>
               </h3>
               <span
                 class="project-status"
@@ -131,14 +130,14 @@
     flex: 1;
   }
 
-  .project-title :global(.arrow-icon) {
+  .project-title .arrow-icon {
     opacity: 0;
     color: var(--color-sea-blue);
     transition: all var(--default-transition-duration)
       var(--default-transition-timing-function);
   }
 
-  .project:hover .project-title :global(.arrow-icon) {
+  .project:hover .project-title .arrow-icon {
     opacity: 1;
     transform: translate(2px, -2px);
   }
