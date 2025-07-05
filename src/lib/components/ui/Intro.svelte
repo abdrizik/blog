@@ -78,7 +78,6 @@
 
   em {
     font-family: var(--font-serif);
-    font-size: var(--text-lg);
 
     color: var(--color-gray-700);
     transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
