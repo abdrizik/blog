@@ -25,10 +25,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  nav a {
-    margin-top: var(--spacing-8);
+    a {
+      margin-top: var(--spacing-8);
+    }
   }
 
   .logo {
@@ -39,7 +39,7 @@
     transition: all var(--default-transition-duration) var(--ease-out);
 
     &:hover {
-      background: oklch(from var(--color-sea-blue) l c h / 0.3);
+      background: oklch(from var(--color-sea-blue) l c h / 0.5);
     }
   }
 </style>
