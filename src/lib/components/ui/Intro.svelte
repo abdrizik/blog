@@ -5,9 +5,17 @@
 <div class="intro">
   <h1 class="fade-in">Abdelrahman Rizik</h1>
   <p class="fade-in delay-1">
-    <em>Building for the web</em>. Focused on frontend development and CSS
-    craftsmanship. Working with diverse frameworks to create seamless user
-    experiences. Software Engineer at
+    <em>Building things for the web</em>. I enjoy working with design systems,
+    creating components, and exploring modern web technologies. I love bringing
+    designs to life and building web applications that are both functional and
+    beautiful. Currently working as a Design Engineer at
+    <Link
+      href="https://milkstraw.ai"
+      rel="noopener"
+      target="_blank"
+    >
+      MilkStraw AI
+    </Link>, previously at
     <Link
       href="https://ard.co"
       rel="noopener"
@@ -17,8 +25,8 @@
     </Link>.
   </p>
   <p class="fade-in delay-2">
-    Passionate about sharing knowledge through tutorials and exploring new web
-    technologies.
+    I love sharing what I learn through writing and always enjoy discovering new
+    tools and techniques in web development.
   </p>
 </div>
 
